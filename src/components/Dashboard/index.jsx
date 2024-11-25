@@ -85,7 +85,7 @@ const demoTheme = createTheme({
   },
 });
 
-function DemoPageContent({ pathname }) {
+function DemoPageContent() {
   return (
     <Box
       sx={{
@@ -96,7 +96,7 @@ function DemoPageContent({ pathname }) {
         textAlign: 'center',
       }}
     >
-      <Typography>Dashboard content for {pathname}</Typography>
+      <Typography>Click: 8802 5112 4013 0843</Typography>
     </Box>
   );
 }
