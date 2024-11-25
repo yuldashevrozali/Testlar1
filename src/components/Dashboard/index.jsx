@@ -17,6 +17,8 @@ import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import Asosiy from '../Asosiy/index.jsx';
 import Test from '../Test/index.jsx';
 import Natijalar from '../Natijalar/index.jsx';
+import Pedagog from '../Pedagog/index.jsx';
+import Dasturchi from '../Dasturchi/index.jsx';
 
 // NAVIGATION obyektini yangilash
 const NAVIGATION = [
@@ -47,17 +49,17 @@ const NAVIGATION = [
     title: 'Qoshimcha',
   },
   {
-    segment: 'reports',
+    segment: 'qoshimcha',
     title: 'Blog',
     icon: <ArticleIcon />,
     children: [
       {
-        segment: 'sales',
+        segment: 'Pedagog',
         title: 'Pedagog',
         icon: <SchoolIcon />,
       },
       {
-        segment: 'traffic',
+        segment: 'Dasturchi',
         title: 'Dasturchi',
         icon: <CodeIcon />,
       },
@@ -126,6 +128,8 @@ function DashboardLayoutBasic(props) {
             <Route path="/Test" element={<Test />} />
             <Route path="/Natijalar" element={<Natijalar />} />
             <Route path="/integrations" element={<DemoPageContent />} />
+            <Route path="/qoshimcha/Pedagog" element={<Pedagog />} />
+            <Route path="/qoshimcha/Dasturchi" element={<Dasturchi />} />
           </Routes>
         </DashboardLayout>
       </Router>
