@@ -5,7 +5,7 @@ import { createTheme } from '@mui/material/styles';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import { AppProvider } from '@toolpad/core/AppProvider';
 import { DashboardLayout } from '@toolpad/core/DashboardLayout';
-import { useDemoRouter } from '@toolpad/core/internal';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // `Switch`ni `Routes`ga almashtiring
 import QuizIcon from '@mui/icons-material/Quiz';
 import ArticleIcon from '@mui/icons-material/Article';
 import SchoolIcon from '@mui/icons-material/School';
@@ -13,28 +13,29 @@ import CodeIcon from '@mui/icons-material/Code';
 import PollIcon from '@mui/icons-material/Poll';
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 
+// Komponentlarni import qilish
+import Asosiy from '../Asosiy/index.jsx';
+import Test from '../Test/index.jsx';
+import Natijalar from '../Natijalar/index.jsx';
 
-
-
-
-
+// NAVIGATION obyektini yangilash
 const NAVIGATION = [
   {
     kind: 'header',
-    title: 'Main items',
+    title: 'Asosiy sahifalar',
   },
   {
-    segment: 'dashboard',
+    segment: 'Asosiy',
     title: 'Asosiy',
     icon: <DashboardIcon />,
   },
   {
-    segment: 'orders',
+    segment: 'Test',
     title: 'Test Ishlash',
     icon: <QuizIcon />,
   },
   {
-    segment: 'natijalr',
+    segment: 'Natijalar',
     title: 'Natijalar',
     icon: <PollIcon />,
   },
@@ -43,7 +44,7 @@ const NAVIGATION = [
   },
   {
     kind: 'header',
-    title: 'Analytics',
+    title: 'Qoshimcha',
   },
   {
     segment: 'reports',
@@ -69,6 +70,7 @@ const NAVIGATION = [
   },
 ];
 
+// Tema va boshqalar
 const demoTheme = createTheme({
   cssVariables: {
     colorSchemeSelector: 'data-toolpad-color-scheme',
@@ -108,32 +110,30 @@ DemoPageContent.propTypes = {
 function DashboardLayoutBasic(props) {
   const { window } = props;
 
-  const router = useDemoRouter('/dashboard');
-
-  // Remove this const when copying and pasting into your project.
   const demoWindow = window !== undefined ? window() : undefined;
 
   return (
-    // preview-start
     <AppProvider
       navigation={NAVIGATION}
-      router={router}
       theme={demoTheme}
       window={demoWindow}
     >
-      <DashboardLayout>
-        <DemoPageContent pathname={router.pathname} />
-      </DashboardLayout>
+      <Router>
+        <DashboardLayout>
+          {/* Routing */}
+          <Routes>
+            <Route path="/Asosiy" element={<Asosiy />} />
+            <Route path="/Test" element={<Test />} />
+            <Route path="/Natijalar" element={<Natijalar />} />
+            <Route path="/integrations" element={<DemoPageContent />} />
+          </Routes>
+        </DashboardLayout>
+      </Router>
     </AppProvider>
-    // preview-end
   );
 }
 
 DashboardLayoutBasic.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * Remove this when copying and pasting into your project.
-   */
   window: PropTypes.func,
 };
 
