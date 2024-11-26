@@ -100,7 +100,7 @@ function DemoPageContent() {
         textAlign: 'center',
       }}
     >
-      <Typography>Click: 8802 5112 4013 0843 .</Typography>
+      <Typography>Click: 8802 5112 4013 0843</Typography>
     </Box>
   );
 }
