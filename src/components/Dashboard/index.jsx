@@ -4,7 +4,7 @@ import Typography from '@mui/material/Typography';
 import { createTheme } from '@mui/material/styles';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import { DashboardLayout } from '@toolpad/core/DashboardLayout';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // `Switch`ni `Routes`ga almashtiring
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom'; // `Switch`ni `Routes`ga almashtiring
 import QuizIcon from '@mui/icons-material/Quiz';
 import ArticleIcon from '@mui/icons-material/Article';
 import SchoolIcon from '@mui/icons-material/School';
@@ -90,6 +90,7 @@ const demoTheme = createTheme({
 });
 
 function DemoPageContent() {
+  const location = useLocation(); // useLocation() is used inside this component now
   return (
     <Box
       sx={{
@@ -100,7 +101,7 @@ function DemoPageContent() {
         textAlign: 'center',
       }}
     >
-      <Typography>Click: 8802 5112 4013 0843</Typography>
+      <Typography>Current Path: {location.pathname}</Typography>
     </Box>
   );
 }
@@ -116,7 +117,7 @@ function DashboardLayoutBasic(props) {
 
   return (
     <AppProvider navigation={NAVIGATION} theme={demoTheme} window={demoWindow}>
-      <Router basename="/pedagog">
+      <Router basename="/">
         <DashboardLayout>
           {/* Routing */}
           <Routes>

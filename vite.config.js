@@ -1,5 +1,5 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -12,7 +12,7 @@ export default defineConfig({
   resolve: {
     alias: {
       // Agar kerak bo'lsa, importlar uchun alias qo'shing
-      '@toolpad/core/AppProvider': '@toolpad/core/lib/AppProvider', // misol uchun
+      '@toolpad/core/AppProvider': '@toolpad/core/lib/AppProvider', // Misol uchun
     },
   },
-})
+});
