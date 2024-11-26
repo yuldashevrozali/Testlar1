@@ -2,22 +2,23 @@
   "name": "testlar1",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "start": "vite preview",
+    "lint": "eslint ."
   },
   "dependencies": {
-    "@mui/icons-material": "^6.1.8",
-    "@mui/toolpad": "^0.1.51",
-    "@toolpad/core": "^0.10.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.15.0",
-    "string.prototype.at": "^1.0.6"
-  },
+  "@mui/icons-material": "^6.1.8",
+  "@toolpad/studio": "^0.1.51",
+  "@toolpad/studio-runtime": "^0.10.0",
+  "@toolpad/studio-components": "^0.1.51",
+  "@toolpad/utils": "^0.1.51",
+  "react": "^18.2.0",
+  "react-dom": "^18.2.0",
+  "react-router-dom": "^6.15.0",
+  "string.prototype.at": "^1.0.6"
+},
   "devDependencies": {
     "@eslint/js": "^9.13.0",
     "@types/react": "^18.3.12",
