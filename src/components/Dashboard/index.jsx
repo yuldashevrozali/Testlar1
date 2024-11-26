@@ -115,12 +115,8 @@ function DashboardLayoutBasic(props) {
   const demoWindow = window !== undefined ? window() : undefined;
 
   return (
-    <AppProvider
-      navigation={NAVIGATION}
-      theme={demoTheme}
-      window={demoWindow}
-    >
-      <Router>
+    <AppProvider navigation={NAVIGATION} theme={demoTheme} window={demoWindow}>
+      <Router basename="/pedagog">
         <DashboardLayout>
           {/* Routing */}
           <Routes>
