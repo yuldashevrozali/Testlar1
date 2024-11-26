@@ -3,7 +3,6 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { createTheme } from '@mui/material/styles';
 import DashboardIcon from '@mui/icons-material/Dashboard';
-import { AppProvider } from '@toolpad/core/AppProvider';
 import { DashboardLayout } from '@toolpad/core/DashboardLayout';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // `Switch`ni `Routes`ga almashtiring
 import QuizIcon from '@mui/icons-material/Quiz';
@@ -19,6 +18,7 @@ import Test from '../Test/index.jsx';
 import Natijalar from '../Natijalar/index.jsx';
 import Pedagog from '../Pedagog/index.jsx';
 import Dasturchi from '../Dasturchi/index.jsx';
+import { AppProvider } from '@toolpad/core';
 
 // NAVIGATION obyektini yangilash
 const NAVIGATION = [
