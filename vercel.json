@@ -1,12 +1,8 @@
 {
     "rewrites": [
       {
-        "source": "/Asosiy",
-        "destination": "/"
-      },
-      {
-        "source": "/Test",
-        "destination": "/"
+        "source": "/(.*)", 
+        "destination": "/index.html"
       }
     ]
   }
