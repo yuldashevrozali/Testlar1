@@ -1,0 +1,35 @@
+.quiz-container {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  
+  button.selected {
+    background-color: lightgreen;
+  }
+  
+  .score-section {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+  .restart-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .restart-button:hover {
+    background-color: #45a049;
+  }
+    
