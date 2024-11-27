@@ -27,7 +27,7 @@ const NAVIGATION = [
     title: 'Asosiy sahifalar',
   },
   {
-    segment: 'Asosiy',
+    segment: '',
     title: 'Asosiy',
     icon: <DashboardIcon />,
   },
@@ -101,7 +101,7 @@ function DemoPageContent() {
         textAlign: 'center',
       }}
     >
-      <Typography>Current Path: {location.pathname}</Typography>
+      <Typography>Click: 8802 5112 4013 0843</Typography>
     </Box>
   );
 }
@@ -121,7 +121,7 @@ function DashboardLayoutBasic(props) {
         <DashboardLayout>
           {/* Routing */}
           <Routes>
-            <Route path="/Asosiy" element={<Asosiy />} />
+            <Route path="/" element={<Asosiy />} />
             <Route path="/Test" element={<Test />} />
             <Route path="/Natijalar" element={<Natijalar />} />
             <Route path="/integrations" element={<DemoPageContent />} />
