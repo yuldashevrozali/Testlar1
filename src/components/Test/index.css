@@ -1,35 +1,60 @@
 .quiz-container {
-    max-width: 600px;
+    max-width: 800px;
     margin: auto;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Box-shadow saqlanadi */
   }
   
-  button {
-    margin: 10px;
-    padding: 10px 20px;
+  .question-section {
+    margin-top: 20px;
+  }
+  
+  .question-container {
+    margin: 20px 0;
+  }
+  
+  .question-text {
+    font-size: 20px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+  
+  .answer-section {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .option-button {
+    margin: 10px 0;
+    padding: 15px 20px;
     font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
   }
   
-  button.selected {
-    background-color: lightgreen;
+  .option-button:hover {
+    background-color: #e8f0fe; /* Hover effekti theme'da amalga oshiriladi */
+  }
+  
+  .option-button.selected {
+    background-color: #cfe3fc;
+    border-color: #1565c0;
+    color: #1565c0;
+  }
+  
+  .button-container {
+    margin-top: 20px;
   }
   
   .score-section {
     font-size: 24px;
     margin-top: 20px;
   }
-  .restart-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
   
-  .restart-button:hover {
-    background-color: #45a049;
-  }
-    

@@ -1,21 +1,64 @@
 [
     {
       "id": 1,
-      "question": "What is the capital of France?",
-      "options": ["Paris", "London", "Berlin", "Madrid"],
-      "correct": "Paris"
+      "question": "Bir o‘qituvchi darslarida 7-A sinfi doimo faol bo'lib, yaxshi bilim va natijalar ko‘rsatadi. Banda o'qituvchining o'quvchilar bilan muloqot qilishi, ta'lim va tarbiya qonuniyatlarini hamda metodlarini chuqur o‘zlashtirgan holda samarali qo'llashi, hozirgi zamon pedagogik texnologiyalardan keng foydalanishi yaxshi qurol bo'lib xizmat qiladi.Bunday holatda o'qituvchi pedagogga xos bo'lgan qaysi qobiliyatni namoyon qiladi?",
+      "options": ["Perseptiv qobiliyat", "Didaktik qobiliyat", "Empatik qobiliyat", "Konstruktiv qobiliyat"],
+      "correct": "Didaktik qobiliyat"
     },
     {
       "id": 2,
-      "question": "What is 2 + 2?",
-      "options": ["3", "4", "5", "6"],
-      "correct": "4"
+      "question": "Pedagogning o`z ustida ishlash bosqichlari nechta?",
+      "options": ["7ta", "4ta", "5ta", "6ta"],
+      "correct": "5ta"
     },
     {
       "id": 3,
-      "question": "What is the largest planet in our solar system?",
-      "options": ["Earth", "Mars", "Jupiter", "Venus"],
-      "correct": "Jupiter"
+      "question": "ўқитувчи ўқувчиларнинг фанлар юзасидан ўзлаштирган билимларини текшириш, кўникма ва малакаларнинг шаклланганлик даражасини, ўқув материалларининг ўзлаштиришдаги камчиликларини аниқлаш, шунингдек, навбатдаги топшириқларни бажариш йўлларини белгилаб олишига ѐрдам беради. Qaysi dars turida?",
+      "options": ["билимларни текшириш дарслари", "Аралаш (комбинациялашган) дарслар", "ўрганилганларни умумлаштириш ва тизимлаштириш дарслари", "билимларни мустаҳкамлаш ва такрорлаш дарслари"],
+      "correct": "билимларни текшириш дарслари"
+    },
+    {
+      "id": 4,
+      "question": "O'quv jarayonini tashkil etishda o'qituvchi uchun zarur bo‘lgan bilimlarni aniqlang 1. O'quv reja va davlat ta'lim standartlari,shuningdek maktab ichi bilan bog'liq boshqa hujjatlar 2. Fanni o'qitishning turli usullari 3. Insoniyatni rivojlantirish, o'qitish va tarbiyalashning klassik va zamonaviy nazariyalari 4. Hayot xavfsizligi asoslar",
+      "options": ["1.2", "1.4", "1.3", "3.4"],
+      "correct": "1.2"
+    }
+    ,
+    {
+      "id": 5,
+      "question": "O'qituvchi o'quv-tarbiyaviy faoliyatini puxta rejalashtirish asosida o'quvchilarining faoliyatini samarali takomillashtirishga muvaffaq bo'ladi. Yuzaga kelishi mumkin bo'lgan pedagogik vaziyatlarni obdon his qilish va muammolarni bartaraf etishga uchradi. Shuning uchun dars bergan sinflarda o‘quvchilar bilimi va odob-axloqi bilan qolgan maktab o'quvchilaridan ajralib turadi. Bunday holatda o'qituvchi pedagogga xos bo'lgan qaysi qobiliyatrni namoyon qiladi?",
+      "options": ["Perseptiv", "Anglash", "Didaktik", "Konstruktiv"],
+      "correct": "Konstruktiv"
+    },
+    {
+      "id": 6,
+      "question": " Фалсафий мулоҳазалар юритишни, рақамларни,математикани, мураккаб масалаларни ҳал қилишни севади, сабабият ва  оқибат натижаларини тушуниш малакасига эга, воқеликда асосийликни  иккинчи даражалисидан ажрата олади > Qaysi qobiliyat turi?",
+      "options": ["Мантиқий қобилият", "Шахснинг ички қобилияти", "Кинестетик", "Эшитиш ва ҳис қилиш қобилияти"],
+      "correct": "Мантиқий қобилият"
+    },
+    {
+      "id": 7,
+      "question": "Tajribali pedagog o'quvchilarning olgan bilimlarini nazorat qilib ularni doimiy ravishda sinflar kesimida tahlil qiladi. Baholashning turli usullaridan foydalanish uchun bu sohadagi yangiliklarni kuzatib boradi. Yo'l qo'yilgan xato va kamchiliklar yzuasidan o'quvchilarga kerakli maslahatlarni beradi. Bu vaziyatda malakali ustoz o'zlashtirishni baholash va qayta aloqani taqdim etish mehnat harakatlarining qaysi zarur ko'nikmalarnini namoyon etgan bo'ladi",
+      "options": ["O'quvchilarning rivojlanish ishlarini rag'batlantirishda baholash usullaridan foydalanish", "Diagnostik va baholash testlarining har xil turlarini ishlab chiqish", "O'quvchilarning turli xil ehtiyojlari va qobiliyatlari bilan bog'liq holda baholash usullarini shaxsga yo'naltirish", "bilmadim"],
+      "correct": "O'quvchilarning rivojlanish ishlarini rag'batlantirishda baholash usullaridan foydalanish"
+    },
+    {
+      "id": 8,
+      "question": " O'qituvchi darsga kirdi, o'quvchilar baland ovozda topolon qilioshayotgan edi, o'qituvchi unga gapirib o'tirmasdan ko'zi va qoshi bilan jiddiy ohangda qaradi, o'qituvchi o'quvchiga qanday tasir ko'rsatdi ?",
+      "options": ["Jest", "Pantomimika", "diapazon", "Mimika"],
+      "correct": "Mimika"
+    },
+    {
+      "id": 9,
+      "question": "O'qituvchi dars davomida aksariyat o'quvchilarni tingladi. Noto'g'ri fikrlarni rad etmasdan, yo'naltiruvchi savollar bilan yangi mavzuni tushuntirishga harakat qildi.O'qituvchi tomonidan bunday usul nima maqsadda qo'llangan edi?",
+      "options": ["O'quvchilarning jamoaviy va loyihaviy ishlarini to'g'ri va samarali tashkil etish maqsadida", "Yoshga doir pedagogika va psixologiya, bolalar bilan ishlash usul va metodlarini to'g'ri qo'llash maqsadida", " Dars davomida har bir o'quvchiga o'z g'oyalari va qarashlarini ifodaetish imkoniyatini berish maqsadida", "O'quvchilar bilimini baholashning differensial yondashuvini hamda odilonabaholash maqsadida"],
+      "correct": " Dars davomida har bir o'quvchiga o'z g'oyalari va qarashlarini ifodaetish imkoniyatini berish maqsadida"
+    },
+    {
+      "id": 10,
+      "question": "Pedagogning o`z ustida ishlash bosqichlari nechta?",
+      "options": ["7ta", "4ta", "5ta", "6ta"],
+      "correct": "5ta"
     }
   ]
   

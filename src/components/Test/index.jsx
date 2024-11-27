@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Data from '../../Data/data.json';
-import { Button } from '@mui/material'; // MUI Button komponenti
-import ReplayIcon from '@mui/icons-material/Replay'; // Qayta ishlash uchun ikonka
-import './index.css'
+import { Button, useTheme } from '@mui/material'; // useTheme qo'shildi
+import ReplayIcon from '@mui/icons-material/Replay';
+import './index.css'; // Style ni alohida faylga chiqaramiz
 
 function Test() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [showScore, setShowScore] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
+
+  // useTheme() bilan mavzuni olamiz
+  const theme = useTheme();
 
   const handleAnswerOptionClick = (answer) => {
     if (answer === Data[currentQuestion].correct) {
@@ -27,7 +30,6 @@ function Test() {
     }, 1000);
   };
 
-
   const handleRestart = () => {
     setCurrentQuestion(0);
     setScore(0);
@@ -35,13 +37,18 @@ function Test() {
     setSelectedAnswer(null);
   };
 
-
   return (
-    <div className="quiz-container">
+    <div
+      className="quiz-container"
+      style={{
+        backgroundColor: theme.palette.background.default, // Dark/Light mode background
+        color: theme.palette.text.primary, // Dark/Light mode text color
+      }}
+    >
       <motion.h1
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.8 }}
       >
         Test ishlash
       </motion.h1>
@@ -49,25 +56,25 @@ function Test() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.8 }}
           className="score-section"
         >
           You scored {score} out of {Data.length}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.8 }}
             className="button-container"
           >
             <Button
               variant="contained"
               color="primary"
-              startIcon={<ReplayIcon />} // Replay Icon qo'shilgan
+              startIcon={<ReplayIcon />}
               onClick={handleRestart}
               sx={{
-                mt: 3, // Margin top - bo'sh joy yuqoridan
-                backgroundColor: '#1976d2', // Tugma rangi
-                '&:hover': { backgroundColor: '#1565c0' }, // Hover effekti
+                mt: 3,
+                backgroundColor: theme.palette.primary.main, // Theme'ga mos rang
+                '&:hover': { backgroundColor: theme.palette.primary.dark },
                 padding: '10px 20px',
                 fontSize: '16px',
                 borderRadius: '8px',
@@ -81,15 +88,16 @@ function Test() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.8 }}
           className="question-section"
         >
           <motion.div
             key={currentQuestion}
-            initial={{ x: -100, opacity: 0 }}
+            initial={{ x: -200, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            exit={{ x: 100, opacity: 0 }}
-            transition={{ duration: 0.5 }}
+            exit={{ x: 200, opacity: 0 }}
+            transition={{ duration: 0.8 }}
+            className="question-container"
           >
             <div className="question-text">
               {Data[currentQuestion].question}
@@ -99,9 +107,11 @@ function Test() {
                 <motion.button
                   key={option}
                   onClick={() => handleAnswerOptionClick(option)}
-                  whileHover={{ scale: 1.1 }}
+                  whileHover={{ scale: 1.05, backgroundColor: theme.palette.action.hover }} // Hover rangini theme'dan olish
                   whileTap={{ scale: 0.95 }}
-                  className={selectedAnswer === option ? 'selected' : ''}
+                  className={`option-button ${
+                    selectedAnswer === option ? 'selected' : ''
+                  }`}
                 >
                   {option}
                 </motion.button>
