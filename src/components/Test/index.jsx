@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Data from '../../Data/data.json';
 import { Button, useTheme } from '@mui/material'; // useTheme qo'shildi
 import ReplayIcon from '@mui/icons-material/Replay';
+import { useNavigate } from 'react-router-dom'; // Navigatsiya uchun
 import './index.css'; // Style ni alohida faylga chiqaramiz
 
 function Test() {
@@ -10,9 +11,8 @@ function Test() {
   const [score, setScore] = useState(0);
   const [showScore, setShowScore] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
-
-  // useTheme() bilan mavzuni olamiz
   const theme = useTheme();
+  const navigate = useNavigate(); // navigate hookini yaratamiz
 
   const handleAnswerOptionClick = (answer) => {
     if (answer === Data[currentQuestion].correct) {
@@ -37,12 +37,16 @@ function Test() {
     setSelectedAnswer(null);
   };
 
+  const handleGoToEslatma = () => {
+    navigate('/qoshimcha/Eslatma'); // Eslatma sahifasiga o'tish
+  };
+
   return (
     <div
       className="quiz-container"
       style={{
-        backgroundColor: theme.palette.background.default, // Dark/Light mode background
-        color: theme.palette.text.primary, // Dark/Light mode text color
+        backgroundColor: theme.palette.background.default,
+        color: theme.palette.text.primary,
       }}
     >
       <motion.h1
@@ -73,7 +77,7 @@ function Test() {
               onClick={handleRestart}
               sx={{
                 mt: 3,
-                backgroundColor: theme.palette.primary.main, // Theme'ga mos rang
+                backgroundColor: theme.palette.primary.main,
                 '&:hover': { backgroundColor: theme.palette.primary.dark },
                 padding: '10px 20px',
                 fontSize: '16px',
@@ -81,6 +85,22 @@ function Test() {
               }}
             >
               Qayta ishlash
+            </Button>
+            <Button
+              variant="contained"
+              color="secondary"
+              sx={{
+                mt: 3,
+                ml: 2,
+                backgroundColor: theme.palette.secondary.main,
+                '&:hover': { backgroundColor: theme.palette.secondary.dark },
+                padding: '10px 20px',
+                fontSize: '16px',
+                borderRadius: '8px',
+              }}
+              onClick={handleGoToEslatma} // Eslatma sahifasiga o'tish
+            >
+              Eslatma
             </Button>
           </motion.div>
         </motion.div>
@@ -107,11 +127,9 @@ function Test() {
                 <motion.button
                   key={option}
                   onClick={() => handleAnswerOptionClick(option)}
-                  whileHover={{ scale: 1.05, backgroundColor: theme.palette.action.hover }} // Hover rangini theme'dan olish
+                  whileHover={{ scale: 1.05, backgroundColor: theme.palette.action.hover }}
                   whileTap={{ scale: 0.95 }}
-                  className={`option-button ${
-                    selectedAnswer === option ? 'selected' : ''
-                  }`}
+                  className={`option-button ${selectedAnswer === option ? 'selected' : ''}`}
                 >
                   {option}
                 </motion.button>

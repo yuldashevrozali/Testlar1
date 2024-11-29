@@ -11,6 +11,7 @@ import SchoolIcon from '@mui/icons-material/School';
 import CodeIcon from '@mui/icons-material/Code';
 import PollIcon from '@mui/icons-material/Poll';
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
+import NoteIcon from '@mui/icons-material/Note';
 
 // Komponentlarni import qilish
 import Asosiy from '../Asosiy/index.jsx';
@@ -19,6 +20,7 @@ import Natijalar from '../Natijalar/index.jsx';
 import Pedagog from '../Pedagog/index.jsx';
 import Dasturchi from '../Dasturchi/index.jsx';
 import { AppProvider } from '@toolpad/core';
+import Eslatma from '../Eslatma/index.jsx';
 
 // NAVIGATION obyektini yangilash
 const NAVIGATION = [
@@ -63,6 +65,11 @@ const NAVIGATION = [
         title: 'Dasturchi',
         icon: <CodeIcon />,
       },
+      {
+        segment: 'Eslatma',
+        title: 'Eslatma',
+        icon: <NoteIcon />,
+      }
     ],
   },
   {
@@ -127,6 +134,7 @@ function DashboardLayoutBasic(props) {
             <Route path="/integrations" element={<DemoPageContent />} />
             <Route path="/qoshimcha/Pedagog" element={<Pedagog />} />
             <Route path="/qoshimcha/Dasturchi" element={<Dasturchi />} />
+            <Route path="/qoshimcha/eslatma" element={<Eslatma />} />
           </Routes>
         </DashboardLayout>
       </Router>
