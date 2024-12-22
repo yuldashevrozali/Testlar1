@@ -1,18 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Data from '../../Data/data.json';
-import { Button, useTheme } from '@mui/material'; // useTheme qo'shildi
+import { Button, TextField, useTheme } from '@mui/material';
 import ReplayIcon from '@mui/icons-material/Replay';
-import { useNavigate } from 'react-router-dom'; // Navigatsiya uchun
-import './index.css'; // Style ni alohida faylga chiqaramiz
+import { useNavigate } from 'react-router-dom';
+import './index.css';
 
 function Test() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [showScore, setShowScore] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
+  const [isUserRegistered, setIsUserRegistered] = useState(false);
+  const [userName, setUserName] = useState('');
   const theme = useTheme();
-  const navigate = useNavigate(); // navigate hookini yaratamiz
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const users = JSON.parse(localStorage.getItem('Users')) || [];
+    if (users.length > 0) {
+      setIsUserRegistered(true);
+    }
+  }, []);
 
   const handleAnswerOptionClick = (answer) => {
     if (answer === Data[currentQuestion].correct) {
@@ -38,7 +47,18 @@ function Test() {
   };
 
   const handleGoToEslatma = () => {
-    navigate('/qoshimcha/Eslatma'); // Eslatma sahifasiga o'tish
+    navigate('/qoshimcha/Eslatma');
+  };
+
+  const handleStartTest = () => {
+    const users = JSON.parse(localStorage.getItem('Users')) || [];
+    const newUser = {
+      id: users.length + 1,
+      name: userName,
+    };
+    users.push(newUser);
+    localStorage.setItem('Users', JSON.stringify(users));
+    setIsUserRegistered(true);
   };
 
   return (
@@ -49,14 +69,45 @@ function Test() {
         color: theme.palette.text.primary,
       }}
     >
-      <motion.h1
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        Test ishlash
-      </motion.h1>
-      {showScore ? (
+      {!isUserRegistered ? (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          className="registration-section"
+        >
+          <motion.h1
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            Ismingiz va familyangizni kiriting
+          </motion.h1>
+          <TextField
+            label="Ism va Familya"
+            variant="outlined"
+            value={userName}
+            onChange={(e) => setUserName(e.target.value)}
+            fullWidth
+            sx={{ mt: 2, mb: 2 }}
+          />
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={handleStartTest}
+            disabled={!userName.trim()}
+            sx={{
+              backgroundColor: theme.palette.primary.main,
+              '&:hover': { backgroundColor: theme.palette.primary.dark },
+              padding: '10px 20px',
+              fontSize: '16px',
+              borderRadius: '8px',
+            }}
+          >
+            Testni boshlash
+          </Button>
+        </motion.div>
+      ) : showScore ? (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -98,7 +149,7 @@ function Test() {
                 fontSize: '16px',
                 borderRadius: '8px',
               }}
-              onClick={handleGoToEslatma} // Eslatma sahifasiga o'tish
+              onClick={handleGoToEslatma}
             >
               Eslatma
             </Button>
