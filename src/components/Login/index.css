@@ -1,13 +1,6 @@
 /* Import Google font - Poppins */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
 body {
   min-height: 100vh;
   display: flex;
@@ -17,7 +10,7 @@ body {
   margin: 0;
 }
 
-.wrapper {
+.login .wrapper {
   position: relative;
   width: 100%;
   max-width: 350px; /* Reduced the width */
@@ -28,7 +21,7 @@ body {
   overflow: hidden;
 }
 
-.form.login {
+.login .form.login {
   width: 100%;
   padding: 40px 30px;
   border-radius: 8px;
@@ -36,7 +29,7 @@ body {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-header {
+.login header {
   font-size: 30px;
   text-align: center;
   color: #333;
@@ -44,13 +37,13 @@ header {
   margin-bottom: 30px;
 }
 
-form {
+.login form {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-form input {
+.login form input {
   height: 50px;
   outline: none;
   border: 1px solid #aaa;
@@ -62,22 +55,22 @@ form input {
   background: #fff;
 }
 
-form input:focus {
+.login form input:focus {
   box-shadow: 0 1px 0 #ddd;
 }
 
-form a {
+.login form a {
   color: #333;
   text-decoration: none;
   font-size: 14px;
   text-align: center;
 }
 
-form a:hover {
+.login form a:hover {
   text-decoration: underline;
 }
 
-form input[type="submit"] {
+.login form input[type="submit"] {
   padding: 0 20px;
   height: 50px;
   font-size: 18px;

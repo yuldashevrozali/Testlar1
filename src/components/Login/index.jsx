@@ -34,7 +34,7 @@ function LoginPage() {
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-          <a href="#">Forgot password?</a>
+          <a href="./forgot-password">Forgot password?</a>
           <input type="submit" value="Login" />
         </form>
       </div>

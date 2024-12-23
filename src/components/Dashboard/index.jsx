@@ -12,7 +12,6 @@ import CodeIcon from "@mui/icons-material/Code";
 import PollIcon from "@mui/icons-material/Poll";
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import NoteIcon from "@mui/icons-material/Note";
-
 import Asosiy from "../Asosiy/index.jsx";
 import Test from "../Test/index.jsx";
 import Natijalar from "../Natijalar/index.jsx";
@@ -23,7 +22,7 @@ import Eslatma from "../Eslatma/index.jsx";
 import { AccountCircle } from "@mui/icons-material";
 import Hisob from "../Hisob/index.jsx";
 import LoginPage from "../Login/index.jsx";
-
+import Forgotpassword from "../Forgotpassword/index.jsx";
 
 const NAVIGATION = [
   {
@@ -101,7 +100,6 @@ const demoTheme = createTheme({
       xl: 1536,
     },
   },
-  
 });
 
 function DemoPageContent() {
@@ -126,16 +124,12 @@ DemoPageContent.propTypes = {
 
 function DashboardLayoutBasic(props) {
   const { window } = props;
-
   const demoWindow = window !== undefined ? window() : undefined;
 
   return (
     <AppProvider navigation={NAVIGATION} theme={demoTheme} window={demoWindow}>
       <Router basename="/">
         <DashboardLayout>
-          {/* Top bar with Logo and Sign Up button */}
-          
-
           {/* Routing */}
           <Routes>
             <Route path="/" element={<Asosiy />} />
@@ -147,6 +141,7 @@ function DashboardLayoutBasic(props) {
             <Route path="/qoshimcha/eslatma" element={<Eslatma />} />
             <Route path="/Signup" element={<Hisob />} />
             <Route path="/Login" element={<LoginPage />} />
+            <Route path="/forgot-password" element={<Forgotpassword />} />
           </Routes>
         </DashboardLayout>
       </Router>
