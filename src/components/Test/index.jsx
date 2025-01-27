@@ -11,6 +11,7 @@ function Test() {
   const [score, setScore] = useState(0);
   const [showScore, setShowScore] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
+  const [correctAnswer, setCorrectAnswer] = useState(null); // To'g'ri javob uchun yangi holat
   const [isUserRegistered, setIsUserRegistered] = useState(false);
   const [userName, setUserName] = useState('');
   const theme = useTheme();
@@ -24,13 +25,19 @@ function Test() {
   }, []);
 
   const handleAnswerOptionClick = (answer) => {
-    if (answer === Data[currentQuestion].correct) {
+    const isCorrect = answer === Data[currentQuestion].correct;
+    setSelectedAnswer(answer);
+    setCorrectAnswer(Data[currentQuestion].correct); // To'g'ri javobni ko'rsatamiz
+
+    if (isCorrect) {
       setScore(score + 1);
     }
+
     const nextQuestion = currentQuestion + 1;
-    setSelectedAnswer(answer);
+
     setTimeout(() => {
       setSelectedAnswer(null);
+      setCorrectAnswer(null); // Keyingi savolga o'tganda to'g'ri javobni tozalash
       if (nextQuestion < Data.length) {
         setCurrentQuestion(nextQuestion);
       } else {
@@ -44,6 +51,7 @@ function Test() {
     setScore(0);
     setShowScore(false);
     setSelectedAnswer(null);
+    setCorrectAnswer(null);
   };
 
   const handleGoToEslatma = () => {
@@ -180,7 +188,13 @@ function Test() {
                   onClick={() => handleAnswerOptionClick(option)}
                   whileHover={{ scale: 1.05, backgroundColor: theme.palette.action.hover }}
                   whileTap={{ scale: 0.95 }}
-                  className={`option-button ${selectedAnswer === option ? 'selected' : ''}`}
+                  className={`option-button ${
+                    selectedAnswer === option
+                      ? option === correctAnswer
+                        ? 'correct' // To'g'ri javob bo'lsa yashil
+                        : 'incorrect' // Noto'g'ri javob bo'lsa qizil
+                      : ''
+                  }`}
                 >
                   {option}
                 </motion.button>

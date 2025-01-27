@@ -58,3 +58,32 @@
     margin-top: 20px;
   }
   
+  .correct {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .incorrect {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .feedback {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  
+  .option-button.correct {
+    background-color: #4caf50; /* Yashil rang to'g'ri javob uchun */
+    color: white;
+    border-color: #4caf50;
+  }
+  
+  .option-button.incorrect {
+    background-color: #f44336; /* Qizil rang noto'g'ri javob uchun */
+    color: white;
+    border-color: #f44336;
+  }
+  
