@@ -6,6 +6,16 @@ import ReplayIcon from '@mui/icons-material/Replay';
 import { useNavigate } from 'react-router-dom';
 import './index.css';
 
+// Shuffle funksiyasi
+const shuffleArray = (array) => {
+  let shuffledArray = [...array];
+  for (let i = shuffledArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]]; // Elementlarni almashtirish
+  }
+  return shuffledArray;
+};
+
 function Test() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
@@ -14,6 +24,7 @@ function Test() {
   const [correctAnswer, setCorrectAnswer] = useState(null);
   const [isUserRegistered, setIsUserRegistered] = useState(false);
   const [userName, setUserName] = useState('');
+  const [shuffledData, setShuffledData] = useState([]);  // Tasodifiylashtirilgan savollar
   const theme = useTheme();
   const navigate = useNavigate();
 
@@ -22,12 +33,15 @@ function Test() {
     if (users.length > 0) {
       setIsUserRegistered(true);
     }
+
+    // Data ni tasodifiylashtirish
+    setShuffledData(shuffleArray(Data)); // Data ni tasodifiylashtirib saqlash
   }, []);
 
   const handleAnswerOptionClick = (answer) => {
-    const isCorrect = answer === Data[currentQuestion].correct;
+    const isCorrect = answer === shuffledData[currentQuestion].correct;
     setSelectedAnswer(answer);
-    setCorrectAnswer(Data[currentQuestion].correct);
+    setCorrectAnswer(shuffledData[currentQuestion].correct);
 
     if (isCorrect) {
       setScore(score + 1);
@@ -38,7 +52,7 @@ function Test() {
     setTimeout(() => {
       setSelectedAnswer(null);
       setCorrectAnswer(null);
-      if (nextQuestion < Data.length) {
+      if (nextQuestion < shuffledData.length) {
         setCurrentQuestion(nextQuestion);
       } else {
         setShowScore(true);
@@ -52,6 +66,9 @@ function Test() {
     setShowScore(false);
     setSelectedAnswer(null);
     setCorrectAnswer(null);
+
+    // Data ni qayta tasodifiylashtirish
+    setShuffledData(shuffleArray(Data)); // Qayta tasodifiylashtirish
   };
 
   const handleGoToEslatma = () => {
@@ -67,6 +84,9 @@ function Test() {
     users.push(newUser);
     localStorage.setItem('Users', JSON.stringify(users));
     setIsUserRegistered(true);
+
+    // Data ni tasodifiylashtirish
+    setShuffledData(shuffleArray(Data)); // Testni boshlashdan oldin Data ni tasodifiylashtirish
   };
 
   return (
@@ -122,7 +142,7 @@ function Test() {
           transition={{ duration: 0.8 }}
           className="score-section"
         >
-          Sizning natijangiz {score} dan {Data.length}
+          Sizning natijangiz {score} dan {shuffledData.length}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -178,11 +198,15 @@ function Test() {
             transition={{ duration: 0.8 }}
             className="question-container"
           >
+            {/* Savol raqami va jami savollar soni */}
+            <div className="question-number">
+              {currentQuestion + 1} / {shuffledData.length}
+            </div>
             <div className="question-text">
-              {Data[currentQuestion].question}
+              {shuffledData[currentQuestion].question}
             </div>
             <div className="answer-section">
-              {Data[currentQuestion].options.map((option) => (
+              {shuffledData[currentQuestion].options.map((option) => (
                 <motion.button
                   key={option}
                   onClick={() => handleAnswerOptionClick(option)}
@@ -191,13 +215,13 @@ function Test() {
                   className={`option-button ${
                     selectedAnswer
                       ? option === correctAnswer
-                        ? 'correct' // Asl to'g'ri javob ko'k rangda
+                        ? 'correct'
                         : option === selectedAnswer
-                        ? 'incorrect' // Tanlangan noto'g'ri javob qizil rangda
+                        ? 'incorrect'
                         : ''
                       : ''
                   }`}
-                  disabled={!!selectedAnswer} // Javob tanlangandan keyin disable qilish
+                  disabled={!!selectedAnswer}
                 >
                   {option}
                 </motion.button>

@@ -149,4 +149,281 @@
     "options": ["3 yoshdan 7 yoshgach", "2 yoshdan 5 yoshgacha", "3 yoshdan 6 yoshgacha"],
     "correct": "3 yoshdan 7 yoshgach"
   }
+  ,
+  {
+    "id": 26,
+    "question": "Aqliy rivojlanish nimaga bog’liq?",
+    "options": [
+      "Miyaning biologik yetilishiga",
+      "Miyaning anatomik tuzilishiga",
+      "Miyaning psixofiziologik yetilishiga",
+      "Ongning rivojlanishiga"
+    ],
+    "answer": "Miyaning biologik yetilishiga"
+  },
+  {
+    "id": 27,
+    "question": "AQSH lik qaysi psixolog shaxsning tarkib topdirish bilan ta’lim o’rtasida ikk i yoqlama aloqa mavjudligini aytib, insonni kamolot sari intilishi bilim olish samaradorligini oshirsa, o’qitishning takomillashuvi uning ijtimoiylashuvi jarayonini tezlashtiradi degan edi.",
+    "options": [
+      "J. Peaje",
+      "P. Joni",
+      "D.J. Bruner",
+      "E. Pyuger"
+    ],
+    "answer": "D.J. Bruner"
+  },
+  {
+    "id": 28,
+    "question": "Amaliy mashg’ulotlarni o’tkazish va tashkil etishda nimalarga e’tibor berish zarur?",
+    "options": [
+      "Ma’lum malakalarni shakllantirishda o’quv materiali, texnik vositalardan unumli foydalanish, psixologik testlarni qo’llashga",
+      "O’qituvchini nutqiga",
+      "Ijtimoiy psixologik treninglarga",
+      "O’zaro va o’quv hamkorlikda"
+    ],
+    "answer": "Ma’lum malakalarni shakllantirishda o’quv materiali, texnik vositalardan unumli foydalanish, psixologik testlarni qo’llashga"
+  },
+  {
+    "id": 29,
+    "question": "Audiovizual qo’llanmalarni qo’llagan holda o’qituvchi va talaba o’rtasidagi o’zaro suhbat ma’ruzaning qanday turiga kiradi?",
+    "options": [
+      "Dialog ma’ruza o’tkazish",
+      "Muammoli ma’ruza",
+      "Monologik ma’ruza",
+      "Evrestik suhbat"
+    ],
+    "answer": "Dialog ma’ruza o’tkazish"
+  },
+  {
+    "id": 30,
+    "question": "Bilim nimani maxsuli?",
+    "options": [
+      "Bilim bilish maxsuli",
+      "Bilim tafakkur maxsuli",
+      "Bilim faol faoliyat maxsuli",
+      "Bilim kuchli mehnat maxsuli"
+    ],
+    "answer": "Bilim bilish maxsuli"
+  },
+
+  {
+    "id": 31,
+    "question": "Go’daklik davrida asosiy yetakchi faoliyat nima?",
+    "options": [
+      "Kattalar bilan emotsional munosabat",
+      "Predmetli faoliyat",
+      "Ota-onaning nutqi",
+      "O’qish faoliyati"
+    ],
+    "answer": "Kattalar bilan emotsional munosabat"
+  },
+  {
+    "id": 32,
+    "question": "Godaklik davrida inqiroz sabablari nima?",
+    "options": [
+      "Ayrim harakatlarini amalga oshirishda doimiy kattalarning qarshiligiga duch kelishi",
+      "Bolaning psixik jixatdan yaxshi rivojlanishi",
+      "Bolaning tengdoshlaridan ilgarilab ketishi",
+      "Motivatsiyalashgan extiyojlarning paydo bo’lishi"
+    ],
+    "answer": "Ayrim harakatlarini amalga oshirishda doimiy kattalarning qarshiligiga duch kelishi"
+  },
+  {
+    "id": 33,
+    "question": "Ilk bolalik davridagi bolalarda murakkab psixik jarayonlardan biri rivojlana boshlaydi bu qaysi jarayon?",
+    "options": [
+      "Xayol",
+      "Idrok",
+      "Xotira",
+      "O’yin"
+    ],
+    "answer": "Xayol"
+  },
+  {
+    "id": 34,
+    "question": "Bola necchi yoshga yetganda savollar bera boshlaydi?",
+    "options": [
+      "3 yoshga",
+      "2,5 yoshga",
+      "3,5 yoshga",
+      "4 yoshga"
+    ],
+    "answer": "3 yoshga"
+  },
+  {
+    "id": 35,
+    "question": "Bolalarpsixologiyasi va psixodiognostikasining asosiy tushunchalari qaysilar?",
+    "options": [
+      "Rivojlanish, psixologik yosh",
+      "Ong,yosh",
+      "Psixika,stimol",
+      "Individuallik,shaxs"
+    ],
+    "answer": "Rivojlanish, psixologik yosh"
+  },
+  {
+    "id": 36,
+    "question": "Bolalarpsixologiyasi va psixodiognostikasining asosiy metodlari qaysilar?",
+    "options": [
+      "Kuzatish,eksperement",
+      "Longityut,test",
+      "Anketa,test",
+      "Sotsometriya,suhbat"
+    ],
+    "answer": "Kuzatish,eksperement"
+  },
+  {
+    "id": 37,
+    "question": "B.G. Ananev psixologiya metodlarini qanday guruhlarga bo’lgan?",
+    "options": [
+      "Tashkiliy,emperik,ma’lumotlarni qayta ishlash, sharxlash metodlari",
+      "Test,anketa,korrellatsiya,sotsometriya,faoliyat natijalarini organish",
+      "Proyektov,diagnostik,ma’lumotlarni qayta ishlash,sharhlash metodlari",
+      "Intellektual,korreksion,ma’lumotlarni qayta ishlash,sharxlash metodlari"
+    ],
+    "answer": "Tashkiliy,emperik,ma’lumotlarni qayta ishlash, sharxlash metodlari"
+  },
+  {
+    "id": 38,
+    "question": "Bolalarpsixologiyasi va psixodiognostikasining alohida predmet sifatida qaysi davrda vujudga kelgan?",
+    "options": [
+      "XIX asrning oxirida",
+      "XIX asrning bishlarida",
+      "XIX asrning o’rtalarida",
+      "XIV asrning oxirida"
+    ],
+    "answer": "XIX asrning oxirida"
+  },
+  {
+    "id": 39,
+    "question": "Egosentrik nutq nutqning qanday shakli?",
+    "options": [
+      "Nutq faoliyati bo’lib, bog’cha bolasining o’yini bilan birga olib boriladigan va bolalarning o’z-o’ziga qaratilgan nutqi",
+      "Nutq faoliyatining ovoz chiqarmasdan ifoda etiladigan alohida turi",
+      "O’z-o’ziga maxliyo bo’lish, o’zining fazilatlari haqida yuqori fikrga ega bo’lish",
+      "Nutq faoliyatining ovoz chiqarib ifoda etiladigan alohida turi"
+    ],
+    "answer": "Nutq faoliyati bo’lib, bog’cha bolasining o’yini bilan birga olib boriladigan va bolalarning o’z-o’ziga qaratilgan nutqi"
+  },
+  {
+    "id": 40,
+    "question": "L.S.Vigotskiy psihik hodisalarni tadqiq qilishda qanday metodni ishlab chiqqan?",
+    "options": [
+      "Eksperemental-genetik metodni",
+      "Eksperemental metodni",
+      "Kuzatuv metodini",
+      "Analiz sintez metodini"
+    ],
+    "answer": "Eksperemental-genetik metodni"
+  },
+  {
+    "id": 41,
+    "question": "Bola rivojlanishida jamiyatni anglash borliqni o’zlashtirishda asosiy faoliyat turini ko’rsating",
+    "options": [
+      "Turli o’yinlar o’ynash",
+      "Borliqni idrok qilish",
+      "Atrofni kuzatish",
+      "Suhbatlashish"
+    ],
+    "answer": "Turli o’yinlar o’ynash"
+  },
+  {
+    "id": 42,
+    "question": "Bolalik nima?",
+    "options": [
+      "Tarixiy kelib chiqish va ko’rinishiga ega bo’lgan, murrakab ijtimoiy-madaniy hodisadir",
+      "Inson hayotiy rivojlanishining bir bo’g’ini",
+      "Inson Yoshi va ruhiyatining muayyan bir davri",
+      "Murakkab ijtimoiy-madaniy hodisadir"
+    ],
+    "answer": "Tarixiy kelib chiqish va ko’rinishiga ega bo’lgan, murrakab ijtimoiy-madaniy hodisadir"
+  },
+  {
+    "id": 43,
+    "question": "Chaqaloqlik qaysi davrlarni o’z ichiga oladi?",
+    "options": [
+      "Tug’ilgandan boshlab 1-2 oylikkacha",
+      "Tug’ilgandan boshlab 6 oylikkacha",
+      "Tug’ilgandan boshlab 3-4 oylikkacha",
+      "Tug’ilgandan boshlab 1-5 oylikkacha"
+    ],
+    "answer": "Tug’ilgandan boshlab 1-2 oylikkacha"
+  },
+  {
+    "id": 44,
+    "question": "Godaklik qaysi davrni o’z ichiga oladi?",
+    "options": [
+      "1-2 oylikdan 1 yoshgacha",
+      "2 oylikdan 3 yoshgacha",
+      "1 oylikdan 7 oygacha",
+      "2 yoshgacha"
+    ],
+    "answer": "1-2 oylikdan 1 yoshgacha"
+  },
+  {
+    "id": 45,
+    "question": "Go’daklik davrida inqiroz sabablari nima?",
+    "options": [
+      "Ayrim harakatlarini amalga oshirishda doimiy kattalarning qarshiligiga duch kelishi.",
+      "Bolaning psixik jixatdan yaxshi rivojlanishi",
+      "Bolaning tengdoshlaridan ilgarilab ketishi",
+      "Motivatsiyalashgan extiyojlarning paydo bo’lishi"
+    ],
+    "answer": "Ayrim harakatlarini amalga oshirishda doimiy kattalarning qarshiligiga duch kelishi."
+  },
+  {
+    "id": 46,
+    "question": "Godalik davrida asosiy yetakchi faoliyat nima?",
+    "options": [
+      "Kattalar bilan emotsional munosabat",
+      "Predmetli faoliyat",
+      "Ota-onaning nutqi",
+      "O’qish faoliyati"
+    ],
+    "answer": "Kattalar bilan emotsional munosabat"
+  },
+  {
+    "id": 47,
+    "question": "Elkoninning fikricha, godaklik davridagi yangi tuzilmalardan biri?",
+    "options": [
+      "Motivatsiyalashgan tasavvurlarning paydo bo’lishi",
+      "Emaklash",
+      "Tik yurish",
+      "Doimiy cheklovlar"
+    ],
+    "answer": "Motivatsiyalashgan tasavvurlarning paydo bo’lishi"
+  },
+  {
+    "id": 48,
+    "question": "Ilk bolalik davri qaysi yoshlarni o’z ichiga oladi?",
+    "options": [
+      "1-3 yosh",
+      "0-1 yosh",
+      "3-5 yosh",
+      "2-3 yosh"
+    ],
+    "answer": "1-3 yosh"
+  },
+  {
+    "id": 49,
+    "question": "Ilk bolalik davrida yetakchi faoliyat nima?",
+    "options": [
+      "Predmetli faoliyat",
+      "Muloqot faoliyati",
+      "Erkalash",
+      "O’yin faoliyati"
+    ],
+    "answer": "Predmetli faoliyat"
+  },
+  {
+    "id": 50,
+    "question": "Bola to’gri yurishni, muloqotga kirishishni, predmetli faoliyatni egallash xususiyatlarini qaysi davrda egallaydi?",
+    "options": [
+      "Ilk bolalik davrida",
+      "Chaqaloqlik davrida",
+      "Godaklik davrida",
+      "Kichik maktab Yoshi davrida"
+    ],
+    "answer": "Ilk bolalik davrida"
+  }
 ]
