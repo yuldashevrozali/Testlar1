@@ -43,7 +43,7 @@ function Test() {
       } else {
         setShowScore(true);
       }
-    }, 1000);
+    }, 2000);
   };
 
   const handleRestart = () => {
@@ -122,7 +122,7 @@ function Test() {
           transition={{ duration: 0.8 }}
           className="score-section"
         >
-          You scored {score} out of {Data.length}
+          Sizning natijangiz {score} dan {Data.length}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}

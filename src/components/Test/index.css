@@ -58,23 +58,6 @@
     margin-top: 20px;
   }
   
-  .correct {
-    background-color: #4caf50;
-    color: white;
-  }
-  
-  .incorrect {
-    background-color: #f44336;
-    color: white;
-  }
-  
-  .feedback {
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: bold;
-  }
-
-  
   .option-button.correct {
     background-color: #2196f3; /* To'g'ri javob uchun ko'k rang */
     color: white;
@@ -84,4 +67,5 @@
     background-color: #f44336; /* Noto'g'ri javob uchun qizil rang */
     color: white;
   }
+  
   

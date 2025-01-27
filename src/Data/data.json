@@ -46,5 +46,107 @@
     "question": "Bilimlarni uzoq muddatli (soat, yil, ba'zan o'nlab yillar) saqlanishini ta'minlaydigan xotira quyi tizimi nima deyiladi?",
     "options": ["Uzoq muddatli xotira", "Qisqa muddatli xotira", "Ixtiyorsiz xotira", "Ixtiyoriy xotira"],
     "correct": "Uzoq muddatli xotira"
+  },
+  {
+    "id": 9,
+    "question": "Ontogenezdagi ma'lum bir davrni belgilab beruvchi soha?",
+    "options": ["yosh", "determinizm", "taraqqiyot", "xronologik"],
+    "correct": "yosh"
+  },
+  {
+    "id": 10,
+    "question": "Psixik taraqqiyotning umumiy qonuniyatlari ...",
+    "options": ["revalutsion, evalutsion, setuatsion", "Diqqat, sezgi, xotira", "Hayol, tafakkur, idrok", "Aqliy yosh, bolalik"],
+    "correct": "revalutsion, evalutsion, setuatsion"
+  },
+  {
+    "id": 11,
+    "question": "Atrof- muhitdagi narsa va hodisalarni inson organizmiga ta'siri natijasida inson ongida yaxlit tushuncha paydo bo'lishi nima deyiladi?",
+    "options": ["Idrok", "Sezgi", "xotira", "hayol"],
+    "correct": "Idrok"
+  },
+  {
+    "id": 12,
+    "question": "\"Bolalar psixologiyasi fanining predmeti tarixan o'zgarib borgan. Bugungi kunda bolalar psixologiyasi fanining predmeti ontogenezdagi psixik taraqqiyotning umumiy qonuniyatlari, yosh davrlari, bir yosh davridan boshqasiga o'tish sabablarini aniqlashdan iborat\" Ushbu fikr kimga tegishli?",
+    "options": ["Obuxova", "Pyaje", "G'oziyev", "Vigotskiy"],
+    "correct": "Obuxova"
+  },
+  {
+    "id": 13,
+    "question": "Bolani tabiiy sharoitda mashgʻulot paytida doʻstlari bilan birgalikdagi faoliyatida oʻrganishi qaysi metod hisoblanadi?",
+    "options": ["Kuzatish", "Enperik", "Langitut", "Obyektivlik prinsipi"],
+    "correct": "Kuzatish"
+  },
+  {
+    "id": 14,
+    "question": "Langitut metodi deb nimaga aytiladi?",
+    "options": ["Uzoq vaqt uzluksiz kuzatish", "Bolalarni tabiiy sharoitga qarab moslashishi", "Atrof muhitni kuzatib tahlil qilish", "Obyektivlik prinsipi"],
+    "correct": "Uzoq vaqt uzluksiz kuzatish"
+  },
+  {
+    "id": 15,
+    "question": "Qaysi prinsip tadqiqotchilardan malumotlar bilan ularning talqinini aralashtirib yubormaslikni talab qiladi?",
+    "options": ["Obyektivlik prinsipi", "Sinchkovlik prinsipi", "Sababiylik prinsipi", "Enperik"],
+    "correct": "Obyektivlik prinsipi"
+  },
+  {
+    "id": 16,
+    "question": "Suniy ravishda jihozlangan xonada olib boriladigan metod qaysi?",
+    "options": ["Laboratoriya eksperimenti", "Ona kundaligi", "Langitut", "Sababiylik,sinchkovlik"],
+    "correct": "Laboratoriya eksperimenti"
+  },
+  {
+    "id": 17,
+    "question": "Bolalar psixologiyasi fanining yordamchi metodlari qaysi qatorda berilgan?",
+    "options": ["Anketa,suxbat", "Sababiylik,sinchkovlik", "Abyektivlik, izchillik", "Langitut"],
+    "correct": "Anketa,suxbat"
+  },
+  {
+    "id": 18,
+    "question": "Olingan axborotni bir- biriga solishtirib qiyoslash qaysi metod?",
+    "options": ["Qiyoslash", "Egizaklar", "Ona kundaligi", "Langitut"],
+    "correct": "Qiyoslash"
+  },
+  {
+    "id": 19,
+    "question": "Egizaklar uchun ishlab chiqilgan metod bu.....?",
+    "options": ["Egizaklar", "Ona kundaligi", "Qiyoslash", "Langitut"],
+    "correct": "Egizaklar"
+  },
+  {
+    "id": 20,
+    "question": "Bolalar psixologiyasining asosiy metodlari qaysilar?",
+    "options": ["Kuzatish va eksperiment", "Aftobiografiya", "Sababiylik", "Langitut"],
+    "correct": "Kuzatish va eksperiment"
+  },
+  {
+    "id": 21,
+    "question": "Maktabgacha yosh davri nech yoshdan nech yoshgacha bo'lgan davrni o'z ichiga oladi?",
+    "options": ["3 dan 7 yoshgacha", "2 dan 7 yoshgacha", "3 dan 6 yoshgacha", "4 dan 6 yoshgacha"],
+    "correct": "3 dan 7 yoshgacha"
+  },
+  {
+    "id": 22,
+    "question": "Maktabgacha yoshdagi bolalar psixologiyasida juda tez sifat o'zgarishlari bo'lishini inobatga olgan xolda nech davrga bo'linadi?",
+    "options": ["2", "3", "4", "5"],
+    "correct": "4"
+  },
+  {
+    "id": 23,
+    "question": "Maktabgacha yoshdagi bolalarning yetakchi faoliyati nima?",
+    "options": ["o'yin", "muloqot", "barchasi", "Sababiylik"],
+    "correct": "o'yin"
+  },
+  {
+    "id": 24,
+    "question": "\"Insonni bogcha yoshidagi davr shunday bir bosqichki, bu davrda bolalarda harakter xislatlarining namunalari shakllanib axloqiy harakterining asoslar yuzaga keadi\" bu kimning fikri?",
+    "options": ["Pavlov", "Lestkov", "Sechenov", "G'oziyev"],
+    "correct": "Pavlov"
+  },
+  {
+    "id": 25,
+    "question": "Qaysi yoshdan qaysi yoshgacha bolalarning barcha bilish jarayonlari o'sadi, sezgirlik kuchayadi, bola xotirasing xajmi o'sadi?",
+    "options": ["3 yoshdan 7 yoshgach", "2 yoshdan 5 yoshgacha", "3 yoshdan 6 yoshgacha"],
+    "correct": "3 yoshdan 7 yoshgach"
   }
 ]
