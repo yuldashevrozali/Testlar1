@@ -11,7 +11,7 @@ function Test() {
   const [score, setScore] = useState(0);
   const [showScore, setShowScore] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
-  const [correctAnswer, setCorrectAnswer] = useState(null); // To'g'ri javob uchun yangi holat
+  const [correctAnswer, setCorrectAnswer] = useState(null);
   const [isUserRegistered, setIsUserRegistered] = useState(false);
   const [userName, setUserName] = useState('');
   const theme = useTheme();
@@ -27,7 +27,7 @@ function Test() {
   const handleAnswerOptionClick = (answer) => {
     const isCorrect = answer === Data[currentQuestion].correct;
     setSelectedAnswer(answer);
-    setCorrectAnswer(Data[currentQuestion].correct); // To'g'ri javobni ko'rsatamiz
+    setCorrectAnswer(Data[currentQuestion].correct);
 
     if (isCorrect) {
       setScore(score + 1);
@@ -37,7 +37,7 @@ function Test() {
 
     setTimeout(() => {
       setSelectedAnswer(null);
-      setCorrectAnswer(null); // Keyingi savolga o'tganda to'g'ri javobni tozalash
+      setCorrectAnswer(null);
       if (nextQuestion < Data.length) {
         setCurrentQuestion(nextQuestion);
       } else {
@@ -189,12 +189,15 @@ function Test() {
                   whileHover={{ scale: 1.05, backgroundColor: theme.palette.action.hover }}
                   whileTap={{ scale: 0.95 }}
                   className={`option-button ${
-                    selectedAnswer === option
+                    selectedAnswer
                       ? option === correctAnswer
-                        ? 'correct' // To'g'ri javob bo'lsa yashil
-                        : 'incorrect' // Noto'g'ri javob bo'lsa qizil
+                        ? 'correct' // Asl to'g'ri javob ko'k rangda
+                        : option === selectedAnswer
+                        ? 'incorrect' // Tanlangan noto'g'ri javob qizil rangda
+                        : ''
                       : ''
                   }`}
+                  disabled={!!selectedAnswer} // Javob tanlangandan keyin disable qilish
                 >
                   {option}
                 </motion.button>
